@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block main %} 
+<div class = "row">
+{% for e in esc %}
+<div class="col-6 wrapper" > 
+    
+    
+    <a href="/escort/{{e.id}}">
+        <amp-img src="{{e.img1.url}}" width="100" height="150"
+          layout="responsive" alt="" class="image">
+        </amp-img>
+    </a>
+        <div class="name">{{ e.name }}</div>
+       
+  </div>
+{% endfor %}
+</div>
+{% endblock main %} 
+
+ 

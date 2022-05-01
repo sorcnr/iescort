@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{% block main %}
+{% for e in esc %}
+<div id="isim">
+    <h1>{{e.name}}</h1>
+  </div>
+  <div id="galeri">
+    <amp-carousel lightbox width="300" height="400" layout="responsive" type="slides">
+      <amp-img src="{{e.img1.url}}" width="300" height="400"
+        layout="responsive"></amp-img>
+      <amp-img src="{{e.img2.url}}" width="300"
+        height="400" layout="responsive"></amp-img>
+      <amp-img src="{{e.img3.url}}" width="300" height="400"
+        layout="responsive"></amp-img>
+    </amp-carousel>
+  </div>
+  <div id="metin">
+    {{e.text}}
+  </div>
+  {% load static %}
+  <div id="tel" class="button">
+    <div id="phone-icon">
+      <amp-img src="{% static 'phone-icon.png' %}" width="100" height="100" layout="responsive" alt="telefon">
+      </amp-img>
+    </div>
+    <div>TEK TIKLA ARA <br />
+      <a href="https://wa.me/{{e.tel}}" class="phone">{{e.tel}}</a>
+    </div>
+
+
+
+  </div>
+  <div id="divider"></div>
+  <div id="wa" class="button">
+    <div id="phone-icon">
+      <amp-img src="{% static 'whatsapp-icon1.png' %}" width="100" height="100" layout="responsive" alt="telefon">
+      </amp-img>
+    </div>
+    <div>TEK TIKLA MESAJ AT <br />
+      <a href="https://wa.me/{{e.tel}}" class="phone">{{e.tel}}</a>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock main %}
