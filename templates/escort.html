@@ -18,7 +18,8 @@
     {{e.text}}
   </div>
   {% load static %}
-  <div id="tel" class="button">
+  <a href="https://wa.me/{{e.tel}}">
+    <div id="tel" class="button">
     <div id="phone-icon">
       <amp-img src="{% static 'phone-icon.png' %}" width="100" height="100" layout="responsive" alt="telefon">
       </amp-img>
@@ -29,11 +30,12 @@
 
 
 
-  </div>
+    </div>
+  </a>
   <div id="divider"></div>
   <div id="wa" class="button">
     <div id="phone-icon">
-      <amp-img src="{% static 'whatsapp-icon1.png' %}" width="100" height="100" layout="responsive" alt="telefon">
+      <amp-img src="{% static 'whatsapp-icon.png' %}" width="100" height="100" layout="responsive" alt="telefon">
       </amp-img>
     </div>
     <div>TEK TIKLA MESAJ AT <br />
