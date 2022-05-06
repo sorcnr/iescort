@@ -2,8 +2,8 @@
 
 {% block main %} 
 <div class = "row">
-{% for e in esc %}
-<div class="col-4 fancyborder" > 
+{% for e in escg %}
+<div class="{% if e.rank == 1 %}col-6{% elif e.rank == 2 %}col-4{% elif e.rank == 3 %}col-3{% endif %} fancyborder {{ e.get_rank_display }}" > 
     <div class="wrap">
     
     <a href="/escort/{{e.id}}" >
@@ -16,6 +16,37 @@
   </div>
 {% endfor %}
 </div>
+<div class = "row">
+  {% for e in escs %}
+  <div class="{% if e.rank == 1 %}col-6{% elif e.rank == 2 %}col-4{% elif e.rank == 3 %}col-3{% endif %} fancyborder {{ e.get_rank_display }}" > 
+      <div class="wrap">
+      
+      <a href="/escort/{{e.id}}" >
+          <amp-img src="{{e.images.first.img.url}}" width="100" height="150"
+            layout="responsive" alt="" class="image">
+          </amp-img>
+      </a>
+          <div class="name">{{ e.name }} {{ e.ilceler }} Escort</div>
+      </div>   
+    </div>
+  {% endfor %}
+  </div>
+  <div class = "row">
+    {% for e in escb %}
+    <div class="{% if e.rank == 1 %}col-6{% elif e.rank == 2 %}col-4{% elif e.rank == 3 %}col-3{% endif %} fancyborder {{ e.get_rank_display }}" > 
+        <div class="wrap">
+        
+        <a href="/escort/{{e.id}}" >
+            <amp-img src="{{e.images.first.img.url}}" width="100" height="150"
+              layout="responsive" alt="" class="image">
+            </amp-img>
+        </a>
+            <div class="name">{{ e.name }} {{ e.ilceler }} Escort</div>
+        </div>   
+      </div>
+    {% endfor %}
+    </div>
+<div class="container just">
 <h1>İzmir'de Escortluk</h1>
 <p>İzmir'de gecelerinizin daha ateşli geçmesini sağlamak için sitemizi kullanabilirsiniz. 
     İster seans, ister saat, isterseniz de gecelik görüşmek isteyin. İzmir'in kızları sizin için her zaman burada. </p>
@@ -25,7 +56,9 @@
 <p>Escort kızlar da şehvet sahibidir 
     eskort bayanlar, şehvetin zirvesini gördükleri için, onlarla seks  yaşamak isteyen partnerlerinin rasyonel ve akıllı arzularını yerine getirmekten genellikle mutlu olurlar. Bu anlamda genellikle karşısındaki beyefendiden  anlayış bekleyen eskort bayanlarını en çok rahatsız eden konularda istek ve taleplerde kendini gösterir. Toplumumuzda eskort bayan algısı olumsuz gelişse de günümüzde pek çok bekar erkeğin vazgeçilmez olduğu gerçeği ile karşı karşıyayız. Eskortlar arasında şehvetli bedenleri, renkleri ve güzel görünümleriyle cezbeden gözleri, kahinin kendinden geçmiş ve özlemle öpmek istediği kiraz aromalı dudakları sayabiliriz. Bunların yanı sıra eskort bayanların uzun, ince ve kıvrımlı vücut şekillerine sahip olduğunu da söyleyebiliriz.Bayanlara refakat ederken sadece 
     görsel güzelliğe razı olmayacak beyler için moda, teknoloji ve hatta güzellik politikaları gibi güncel konularda gerekli bilgi ve deneyime sahip  çok yetenekli güzellikleri göz önünde bulundurun. Çünkü artık geçmişin flört kadın profilinin yerini dikkatli, kendini geliştirmiş ve eğitimli eskort bayanlar almıştır. En önemli etken kuşkusuz eğitim seviyesinin artmış olmasıdır. Bazı alışkanlıklar  artık 
-     kendinden emin ve özgür ruhlu İstanbul eskort profiline yol verdi. Figürlerini şehrin sokaklarında tüm cazibesiyle konuşturan eskort hanımlar artık sık sık görülüyor.Sadece bu değil elbette; Sanatsal yönünü göstermekten çekinmeyen eskort bayanlar günümüzde pek çok sanat galerisinin müdavimleri arasında yer almaktadır.</p>
+     kendinden emin ve özgür ruhlu İstanbul eskort profiline yol verdi. Figürlerini şehrin sokaklarında tüm cazibesiyle konuşturan eskort hanımlar artık sık sık görülüyor.Sadece bu değil elbette; Sanatsal yönünü göstermekten çekinmeyen eskort bayanlar günümüzde pek çok sanat galerisinin müdavimleri arasında yer almaktadır.
+    </p>
+  </div>
      
 {% endblock main %} 
 

@@ -10,11 +10,11 @@ from .models import Eskort
 
 # Create your views here.
 def index_view(request, *args, **kwargs):
-    esc = Eskort.objects.all().order_by('rank')
-    for es in esc:
-        print(dir(es.images))
+    escg = Eskort.objects.filter(rank=1).all()
+    escs = Eskort.objects.filter(rank=2).all()
+    escb = Eskort.objects.filter(rank=3).all()
         
-    return render(request,'index.html',{'esc':esc})
+    return render(request,'index.html',{'escg':escg,'escs':escs,'escb':escb})
 def escort_view(request, id):
     esc = Eskort.objects.filter(id=id).first()
     images = esc.images.all()
