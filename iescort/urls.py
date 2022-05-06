@@ -26,5 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view,name="main"),
     path('escort/<int:id>/',escort_view, name="escort-view"),
-    urls(r'^tinymce/', include('tinymce.urls')),
+    #urls(r'^tinymce/', include('tinymce.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
