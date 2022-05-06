@@ -6,7 +6,7 @@ from datetime import timedelta
 from email.policy import default
 from django.db import models
 from multiselectfield import MultiSelectField
-
+from tinymce.models import HTMLField
 
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
@@ -45,7 +45,7 @@ class Eskort(models.Model):
 
     name = models.CharField(_("İsim"),max_length=100)
     tel = models.CharField(_("Telefon"),max_length=20)
-    text = models.TextField(_("Açıklama"))
+    text = HTMLField(_("Açıklama"))
     duration = models.DurationField(_("Süre"),default=timedelta(days=7))
     ilceler = MultiSelectField(_("İlçeler"),max_length=200, choices=Ilceler.choices,default=Ilceler.buca)
     rank = models.IntegerField(choices=Rank.choices)

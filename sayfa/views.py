@@ -19,6 +19,6 @@ def escort_view(request, id):
     esc = Eskort.objects.filter(id=id).first()
     images = esc.images.all()
     
-    
-    escAll = Eskort.objects.all().order_by('rank')[:2]
-    return render(request,'escort.html',{'e':esc,'escAll':escAll, 'images': images})
+    text = esc.text.rstrip('\"')
+    escAll = Eskort.objects.all().order_by('rank')[:4]
+    return render(request,'escort.html',{'e':esc,'escAll':escAll, 'images': images, 'text': text})

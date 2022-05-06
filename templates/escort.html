@@ -2,7 +2,7 @@
 {% block main %}
 {% load static %}
 <div id="isim">
-    <h1>{{e.name}}</h1>
+    <h1>Escort {{e.name}}</h1>
   </div>
   <div id="galeri">
     {% for img in images %}
@@ -13,7 +13,7 @@
     </amp-carousel>
   </div>
   <div id="metin">
-    {{e.text}}
+    {{text|safe}}
   </div>
   
   <a href="tel:0{{e.tel}}">
@@ -43,4 +43,19 @@
   </div>
 </a>
  
+<div class = "row">
+  {% for e in escAll %}
+  <div class="{% if e.rank == 1 %}col-6{% elif e.rank == 2 %}col-4{% elif e.rank == 3 %}col-3{% endif %} fancyborder {{ e.get_rank_display }}" > 
+    <div class="wrap">
+    
+    <a href="/escort/{{e.id}}" >
+        <amp-img src="{{e.images.first.img.url}}" width="100" height="150"
+          layout="responsive" alt="" class="image">
+        </amp-img>
+    </a>
+        <div class="name">{{ e.name }} {{ e.ilceler }} Escort</div>
+    </div>   
+  </div>
+  {% endfor %}
+</div>
 {% endblock main %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sayfa',
     'multiselectfield',
+    'tinymce'
     
 ]
 FAKER_LOCALE = None     # settings.LANGUAGE_CODE is loaded
