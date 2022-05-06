@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6n#f+6rmq))ugge2*f%-u2=3xh*q8brf5g#+(1fxcl8o(tjr*5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sorginal.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['sorginal.pythonanywhere.com','127.0.0.1','iescort.cyou']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sayfa',
-    'faker',
+    'multiselectfield',
     
 ]
 FAKER_LOCALE = None     # settings.LANGUAGE_CODE is loaded
