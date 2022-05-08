@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6n#f+6rmq))ugge2*f%-u2=3xh*q8brf5g#+(1fxcl8o(tjr*5
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+GOOGLE_API_KEY = 'AIzaSyCT4-4jrbXw-evJ1UnZx0avLIVDDPhQ4BQ'
 ALLOWED_HOSTS = ['sorginal.pythonanywhere.com','127.0.0.1','iescort.cyou','https://iescort.cyou','www.iescort.cyou']
 CSRF_TRUSTED_ORIGINS = ['https://iescort.cyou']
 
