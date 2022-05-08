@@ -7,7 +7,7 @@ from email.policy import default
 from django.db import models
 from multiselectfield import MultiSelectField
 from tinymce.models import HTMLField
-
+#from sayfa.views import escort_view
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
