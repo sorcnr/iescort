@@ -1,5 +1,6 @@
+from ast import keyword
 from django.contrib import admin 
-from .models import Eskort, Image
+from .models import Eskort, Image, Blog, KeyWord
 
 from django.contrib.auth.decorators import login_required
 
@@ -15,4 +16,11 @@ class EskortAdmin(admin.ModelAdmin):
 
 admin.site.register(Eskort,EskortAdmin)
 
+class BlogInline(admin.TabularInline):
+    model = KeyWord
+    extra = 3
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ('title','date')
+    inlines = [BlogInline,]
+admin.site.register(Blog, BlogAdmin)
 

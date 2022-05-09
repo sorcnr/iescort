@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'tinymce'
     
 ]
+# Add to project/settings.py
+SECURE_HSTS_SECONDS = 2000000  # Unit is seconds; *USE A SMALL VALUE FOR TESTING!*
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 FAKER_LOCALE = None     # settings.LANGUAGE_CODE is loaded
 FAKER_PROVIDERS = None  # faker.DEFAULT_PROVIDERS is loaded (all)
 MIDDLEWARE = [

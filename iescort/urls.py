@@ -25,6 +25,7 @@ app_name = "iescort"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view,name="main"),
+    path('amp/', index_view,name="amp"),
     path('izmir-escort/<int:id>/',escort_view, name="escort_view"),
     #urls(r'^tinymce/', include('tinymce.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,7 +1,3 @@
-
-
-
-
 from datetime import timedelta
 from email.policy import default
 from django.db import models
@@ -57,13 +53,33 @@ class Eskort(models.Model):
     def __str__(self):
         return f"{self.name} ({self.tel})"
 
-
 class Image(models.Model):
 
     img = models.ImageField(upload_to='esc-img')
     esc = models.ForeignKey(Eskort, on_delete=models.CASCADE,related_name="images")
 
-  
+class Blog(models.Model):
+    title = models.CharField(_("Başlık"), max_length=100)
+    text = HTMLField(_("Metin"))
+    date = models.DateField(_("Tarih"), auto_now=True)  
+
+class KeyWord(models.Model):
+    class WordChoices(models.TextChoices):
+        buca_escort = "Buca Escort"
+        izmir_buca_escort = "İzmir Buca Escort"
+        buca_escort_bayanlar = "Buca Escort Bayanlar"
+        buca_escort_bayan = "Buca Escort Bayan"
+        bornova_escort = "Bornova Escort"
+        izmir_bornova_escort = "İzmir Bornova Escort"
+        alsancak_escort = "Alsancak Escort"
+        izmir_alsancak_escort = "İzmir Alsancak Escort"
+        izmir_escort = "İzmir Escort"
+        izmir_escort_bayanlar = "İzmir Escort Bayanlar"
+        izmir_escort_bayan = "İzmir Escort Bayan"
+        izmir_escort_kizlar = "İzmir Escort Kızlar"
+
+    key = models.CharField(_("Keyword"),choices=WordChoices.choices, max_length=50)
+    blog = models.ForeignKey("Blog", related_name=_("keywords"), on_delete=models.CASCADE)
 
    
 
