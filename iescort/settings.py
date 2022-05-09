@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sayfa',
     'multiselectfield',
-    'tinymce'
+    'tinymce',
     
 ]
 # Add to project/settings.py
@@ -139,7 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR , 'static')
+STATIC_ROOT = '/var/www/iescort.cyou/static'
 STATIC_URL = '/static/'
 
 AMP_API = 'AIzaSyCT4-4jrbXw-evJ1UnZx0avLIVDDPhQ4BQ'
