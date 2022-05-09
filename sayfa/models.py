@@ -76,7 +76,7 @@ class KeyWord(models.Model):
         izmir_escort = "İzmir Escort"
         izmir_escort_bayanlar = "İzmir Escort Bayanlar"
         izmir_escort_bayan = "İzmir Escort Bayan"
-        izmir_escort_kizlar = "İzmir Escort Kızlar"
+        
 
     key = models.CharField(_("Keyword"),choices=WordChoices.choices, max_length=50)
     blog = models.ForeignKey("Blog", related_name=_("keywords"), on_delete=models.CASCADE)
