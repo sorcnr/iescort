@@ -32,6 +32,7 @@ CSRF_TRUSTED_ORIGINS = ['https://iescort.cyou']
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_volt.apps.AdminVoltConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

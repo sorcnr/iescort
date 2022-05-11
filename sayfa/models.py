@@ -58,6 +58,10 @@ class Image(models.Model):
     img = models.ImageField(upload_to='esc-img')
     esc = models.ForeignKey(Eskort, on_delete=models.CASCADE,related_name="images")
 
+class BlogImage(models.Model):
+    img = models.ImageField(_("Resim"), upload_to='blog-img')
+    blog = models.ForeignKey("Blog", verbose_name=_("images"), on_delete=models.CASCADE)
+
 class Blog(models.Model):
     title = models.CharField(_("Başlık"), max_length=100)
     text = HTMLField(_("Metin"))
