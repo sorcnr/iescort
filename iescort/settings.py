@@ -42,15 +42,20 @@ INSTALLED_APPS = [
     'sayfa',
     'multiselectfield',
     'tinymce',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
     
 ]
 # Add to project/settings.py
-SECURE_HSTS_SECONDS = 2000000  # Unit is seconds; *USE A SMALL VALUE FOR TESTING!*
+SECURE_HSTS_SECONDS = 3000000  # Unit is seconds; *USE A SMALL VALUE FOR TESTING!*
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+SECURE_HSTS_SECONDS = 2_592_000  # 30 days
 FAKER_LOCALE = None     # settings.LANGUAGE_CODE is loaded
 FAKER_PROVIDERS = None  # faker.DEFAULT_PROVIDERS is loaded (all)
+SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -60,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'iescort.urls'
 
@@ -142,5 +148,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/var/www/iescort.cyou/static'
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [BASE_DIR / "static"]
 AMP_API = 'AIzaSyCT4-4jrbXw-evJ1UnZx0avLIVDDPhQ4BQ'

@@ -1,11 +1,13 @@
 from datetime import timedelta
 from email.policy import default
+
 from django.db import models
 from multiselectfield import MultiSelectField
 from tinymce.models import HTMLField
 #from sayfa.views import escort_view
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -46,12 +48,17 @@ class Eskort(models.Model):
     ilceler = MultiSelectField(_("İlçeler"),max_length=200, choices=Ilceler.choices,default=Ilceler.buca)
     rank = models.IntegerField(choices=Rank.choices)
     status = models.IntegerField(_("Durum"),choices=Status.choices, default=1)
-    
+    slug = models.SlugField(null=False,blank=True,unique=True)
 
     def get_absolute_url(self):
-        return reverse("escort_view", kwargs={"id": self.id})
+        return reverse("escort_view", kwargs={"slug": self.slug})
     def __str__(self):
         return f"{self.name} ({self.tel})"
+
+    def save(self, *args, **kwargs):
+        if not self.slug or self.slug == '':
+            self.slug = slugify(self.name + " " + self.ilceler.__str__())
+        return super().save(*args, **kwargs)
 
 class Image(models.Model):
 
@@ -65,7 +72,17 @@ class BlogImage(models.Model):
 class Blog(models.Model):
     title = models.CharField(_("Başlık"), max_length=100)
     text = HTMLField(_("Metin"))
-    date = models.DateField(_("Tarih"), auto_now=True)  
+    date = models.DateField(_("Tarih"), auto_now=True)
+    slug = models.SlugField(_("Slug"),null=False,blank=True,unique=True) 
+
+    def get_absolute_url(self):
+        return reverse("blog_view", kwargs={"slug": self.slug})
+
+    def save(self, *args, **kwargs):
+        if not self.slug or self.slug == '':
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
+
 
 class KeyWord(models.Model):
     class WordChoices(models.TextChoices):
@@ -81,8 +98,12 @@ class KeyWord(models.Model):
         izmir_escort_bayanlar = "İzmir Escort Bayanlar"
         izmir_escort_bayan = "İzmir Escort Bayan"
         
-
+    
     key = models.CharField(_("Keyword"),choices=WordChoices.choices, max_length=50)
+    def slug(self):
+        slug = slugify(self.key)
+        return slug
+    
     blog = models.ForeignKey("Blog", related_name=_("keywords"), on_delete=models.CASCADE)
 
    

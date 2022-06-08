@@ -45,20 +45,30 @@
         </div>   
       </div>
     {% endfor %}
-    </div>
-<div class="container just">
-<h1>İzmir Escort</h1>
-<p>İzmir'de gecelerinizin daha ateşli geçmesini sağlamak için sitemizi kullanabilirsiniz. 
-    İster seans, ister saat, isterseniz de gecelik görüşmek isteyin. İzmir'in kızları sizin için her zaman burada. </p>
-<h2>VIP Escort</h2>
-      <p>Bu faydaları, seksin insanlara birçok faydası hakkında uzman görüşleri ve makaleler yayınlayan web sitelerinden alabilirsiniz. Escort bayan da bu noktada ihtiyaçlarınız konusunda size yardımcı olabilir veya birkaç saat geçirebilirsiniz ki bu oldukça keyifli sayılacaktır. Seksin en bariz faydalarından biri, düzenli olarak seks yapan, eskort olsun ya da olmasın, kilo alma gibi sorunlar yaşamaması ve hatta bunu düzenli olarak yapmanın sekse katkı sağlayan sorunlardan biri olmasıdır. Birçok uzman aynı fikirde. Peki seks sadece kilo verdirir mi? Başka nelerin insan sağlığına olumlu etkisi olduğunu düşünürseniz tanışma sitesi olarak cevap vermeye çalışalım.</p>
-<h3>Seks Önemli ! </h3>
-<p>Escort kızlar da şehvet sahibidir 
-    eskort bayanlar, şehvetin zirvesini gördükleri için, onlarla seks  yaşamak isteyen partnerlerinin rasyonel ve akıllı arzularını yerine getirmekten genellikle mutlu olurlar. Bu anlamda genellikle karşısındaki beyefendiden  anlayış bekleyen eskort bayanlarını en çok rahatsız eden konularda istek ve taleplerde kendini gösterir. Toplumumuzda eskort bayan algısı olumsuz gelişse de günümüzde pek çok bekar erkeğin vazgeçilmez olduğu gerçeği ile karşı karşıyayız. Eskortlar arasında şehvetli bedenleri, renkleri ve güzel görünümleriyle cezbeden gözleri, kahinin kendinden geçmiş ve özlemle öpmek istediği kiraz aromalı dudakları sayabiliriz. Bunların yanı sıra eskort bayanların uzun, ince ve kıvrımlı vücut şekillerine sahip olduğunu da söyleyebiliriz.Bayanlara refakat ederken sadece 
-    görsel güzelliğe razı olmayacak beyler için moda, teknoloji ve hatta güzellik politikaları gibi güncel konularda gerekli bilgi ve deneyime sahip  çok yetenekli güzellikleri göz önünde bulundurun. Çünkü artık geçmişin flört kadın profilinin yerini dikkatli, kendini geliştirmiş ve eğitimli eskort bayanlar almıştır. En önemli etken kuşkusuz eğitim seviyesinin artmış olmasıdır. Bazı alışkanlıklar  artık 
-     kendinden emin ve özgür ruhlu İstanbul eskort profiline yol verdi. Figürlerini şehrin sokaklarında tüm cazibesiyle konuşturan eskort hanımlar artık sık sık görülüyor.Sadece bu değil elbette; Sanatsal yönünü göstermekten çekinmeyen eskort bayanlar günümüzde pek çok sanat galerisinin müdavimleri arasında yer almaktadır.
-    </p>
   </div>
+  
+  <div id="articles" class="row">
+    {%for blog in blogs%}
+    <div class="card col-12">
+    <div class="card-header">
+      <h2>{{blog.title}}</h2>
+    </div>
+    <div class="card-header-pills">
+      <div class="keywords">
+        {% for key in blog.keywords.all %}
+      <a href="https://iescort.cyou/{{key.slug}}"><span class="badge badge-pill bg-secondary">{{key.key}}</span></a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="card-body">
+    {{blog.text|truncatewords_html:100|safe}}
+    </div>
+    <a href="{{blog.get_absolute_url}}"  class="btn btn-outline-primary" >Devamı ..</a>
+  </div>
+  {%endfor%}
+
+ 
+
      
 {% endblock main %} 
 

@@ -1,0 +1,322 @@
+
+   
+    {%include 'boot-pink.html'%}
+    .button {
+
+        background-color: rgb(234, 79, 1);
+        color: #fff;
+        padding: 10px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-family: 'Teko', sans-serif; 
+  
+      }
+    #isim h1 {
+        font-size: 60px;
+        margin-top:15px;
+        margin-bottom:-15px;
+        text-align: center;
+    }
+    #metin {
+        text-align: center;
+        padding-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 15px;
+    }
+    #tel {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #f0a400;
+        color: #fff;
+        margin: 5px;
+    }
+    a.phone {
+        font-size: xx-large;
+        text-decoration: none;
+        color: #fff;
+    }
+    #phone-icon {
+        width: 70px;
+        padding-bottom: 2px;
+        padding-top: 1px;
+    }
+    #wa {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #029e2e;
+        color: #fff;
+        margin: 5px;
+    }
+  
+  
+
+    
+    .name {
+        position: absolute;
+        bottom:3vw;
+        
+        padding-right: 1vw;
+        padding-left: 1vw;
+        font-family: 'Teko', sans-serif;
+        font-size: 2.5vw;
+        color:white;
+        text-shadow: -0.5vw 0.5vw 1vw #CE1374;
+        
+        text-align: center;
+  
+      }
+    .just {
+      text-align:justify;
+      
+    }
+
+      
+
+    
+      
+      .fancyborder  {
+        padding:1.5vw;
+        
+        border-radius: 2vw;
+      }
+      .Gold {
+        background:
+          -moz-linear-gradient(
+          -72deg,
+          #ffde45,
+          #ffffff 16%,
+          #ffde45 21%,
+          #ffffff 24%,
+          #452100 27%,
+          #ffde45 36%,
+          #ffffff 45%,
+          #ffffff 60%,
+          #ffde45 72%,
+          #ffffff 80%,
+          #ffde45 84%,
+          #452100
+        );
+        background:
+        -webkit-linear-gradient(
+          -72deg,
+          #ffde45,
+          #ffffff 16%,
+          #ffde45 21%,
+          #ffffff 24%,
+          #452100 27%,
+          #ffde45 36%,
+          #ffffff 45%,
+          #ffffff 60%,
+          #ffde45 72%,
+          #ffffff 80%,
+          #ffde45 84%,
+          #452100
+        );
+        background:
+        -o-linear-gradient(
+          -72deg,
+          #ffde45,
+          #ffffff 16%,
+          #ffde45 21%,
+          #ffffff 24%,
+          #452100 27%,
+          #ffde45 36%,
+          #ffffff 45%,
+          #ffffff 60%,
+          #ffde45 72%,
+          #ffffff 80%,
+          #ffde45 84%,
+          #452100
+        );
+        background:
+        linear-gradient(
+          -72deg,
+          #ffde45,
+          #ffffff 16%,
+          #ffde45 21%,
+          #ffffff 24%,
+          #452100 27%,
+          #ffde45 36%,
+          #ffffff 45%,
+          #ffffff 60%,
+          #ffde45 72%,
+          #ffffff 80%,
+          #ffde45 84%,
+          #452100
+        );
+      }
+      .Silver{
+        background:
+        -moz-linear-gradient(
+        -72deg,
+        #dedede,
+        #ffffff 16%,
+        #dedede 21%,
+        #ffffff 24%,
+        #454545 27%,
+        #dedede 36%,
+        #ffffff 45%,
+        #ffffff 60%,
+        #dedede 72%,
+        #ffffff 80%,
+        #dedede 84%,
+        #a1a1a1
+      );
+      background:
+      -webkit-linear-gradient(
+        -72deg,
+        #dedede,
+        #ffffff 16%,
+        #dedede 21%,
+        #ffffff 24%,
+        #454545 27%,
+        #dedede 36%,
+        #ffffff 45%,
+        #ffffff 60%,
+        #dedede 72%,
+        #ffffff 80%,
+        #dedede 84%,
+        #a1a1a1
+      );
+      background:
+      -o-linear-gradient(
+        -72deg,
+        #dedede,
+        #ffffff 16%,
+        #dedede 21%,
+        #ffffff 24%,
+        #454545 27%,
+        #dedede 36%,
+        #ffffff 45%,
+        #ffffff 60%,
+        #dedede 72%,
+        #ffffff 80%,
+        #dedede 84%,
+        #a1a1a1
+      );
+      background:
+      linear-gradient(
+        -72deg,
+        #dedede,
+        #ffffff 16%,
+        #dedede 21%,
+        #ffffff 24%,
+        #454545 27%,
+        #dedede 36%,
+        #ffffff 45%,
+        #ffffff 60%,
+        #dedede 72%,
+        #ffffff 80%,
+        #dedede 84%,
+        #a1a1a1
+      );
+      }
+      .Bronze {
+        background:
+        -moz-linear-gradient(
+          -72deg,
+          #ca7345,
+          #ffdeca 16%,
+          #ca7345 21%,
+          #ffdeca 24%,
+          #a14521 27%,
+          #ca7345 36%,
+          #ffdeca 45%,
+          #ffdeca 60%,
+          #ca7345 72%,
+          #ffdeca 80%,
+          #ca7345 84%,
+          #732100
+        );
+        background:
+        -webkit-linear-gradient(
+          -72deg,
+          #ca7345,
+          #ffdeca 16%,
+          #ca7345 21%,
+          #ffdeca 24%,
+          #a14521 27%,
+          #ca7345 36%,
+          #ffdeca 45%,
+          #ffdeca 60%,
+          #ca7345 72%,
+          #ffdeca 80%,
+          #ca7345 84%,
+          #732100
+        );
+        background:
+        -o-linear-gradient(
+          -72deg,
+          #ca7345,
+          #ffdeca 16%,
+          #ca7345 21%,
+          #ffdeca 24%,
+          #a14521 27%,
+          #ca7345 36%,
+          #ffdeca 45%,
+          #ffdeca 60%,
+          #ca7345 72%,
+          #ffdeca 80%,
+          #ca7345 84%,
+          #732100
+        );
+        background:
+        linear-gradient(
+          -72deg,
+          #ca7345,
+          #ffdeca 16%,
+          #ca7345 21%,
+          #ffdeca 24%,
+          #a14521 27%,
+          #ca7345 36%,
+          #ffdeca 45%,
+          #ffdeca 60%,
+          #ca7345 72%,
+          #ffdeca 80%,
+          #ca7345 84%,
+          #732100
+        );
+      }
+
+    .parallax h1 {
+      color: darkred;
+      top: 20vw;
+      font-family: 'Teko', sans-serif; 
+      
+      position: absolute;
+      z-index: 1;
+      font-size: 10vw;
+    }
+    .icon{
+      position:absolute;
+      top: 30vw;
+      z-index:1;
+      margin-left:5vw;
+
+      
+      width: 10vw;
+      height: 10vw;
+    }
+    .parallax{
+      
+      overflow:hidden;
+    }
+    .keywords{
+      padding-left:10px;
+    }
+    .keywords span{
+      margin-right:10px;
+    }
+    footer div{
+      position:absolute;
+      bottom:10px;
+    }
+    .card-body a{
+      margin-bottom:10px;
+    }
+    .footer-copyright{
+      text-align:center;
+    }
+    
+
